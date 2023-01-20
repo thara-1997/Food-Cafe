@@ -15,6 +15,9 @@
 		278E8A1229771348007F0B8A /* Food__CafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E8A1129771348007F0B8A /* Food__CafeTests.swift */; };
 		278E8A1C29771348007F0B8A /* Food__CafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E8A1B29771348007F0B8A /* Food__CafeUITests.swift */; };
 		278E8A1E29771348007F0B8A /* Food__CafeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E8A1D29771348007F0B8A /* Food__CafeUITestsLaunchTests.swift */; };
+		966FF7A7297B02AB00E5FA38 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FF7A6297B02AB00E5FA38 /* LoginViewController.swift */; };
+		966FF7AA297B091100E5FA38 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 966FF7A9297B091100E5FA38 /* Kingfisher */; };
+		966FF7AD297B096400E5FA38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 966FF7AC297B096400E5FA38 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		278E8A1729771348007F0B8A /* Food  CafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food  CafeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		278E8A1B29771348007F0B8A /* Food__CafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food__CafeUITests.swift; sourceTree = "<group>"; };
 		278E8A1D29771348007F0B8A /* Food__CafeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food__CafeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		966FF7A6297B02AB00E5FA38 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966FF7AA297B091100E5FA38 /* Kingfisher in Frameworks */,
+				966FF7AD297B096400E5FA38 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,7 @@
 		278E89F929771344007F0B8A /* Food  Cafe */ = {
 			isa = PBXGroup;
 			children = (
+				966FF7A5297B017A00E5FA38 /* Views */,
 				278E89FA29771344007F0B8A /* AppDelegate.swift */,
 				278E89FC29771344007F0B8A /* SceneDelegate.swift */,
 				278E89FE29771344007F0B8A /* ViewController.swift */,
@@ -124,6 +131,14 @@
 			path = "Food  CafeUITests";
 			sourceTree = "<group>";
 		};
+		966FF7A5297B017A00E5FA38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				966FF7A6297B02AB00E5FA38 /* LoginViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +155,10 @@
 			dependencies = (
 			);
 			name = "Food  Cafe";
+			packageProductDependencies = (
+				966FF7A9297B091100E5FA38 /* Kingfisher */,
+				966FF7AC297B096400E5FA38 /* SnapKit */,
+			);
 			productName = "Food  Cafe";
 			productReference = 278E89F729771344007F0B8A /* Food  Cafe.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +231,10 @@
 				Base,
 			);
 			mainGroup = 278E89EE29771344007F0B8A;
+			packageReferences = (
+				966FF7A8297B091100E5FA38 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				966FF7AB297B096400E5FA38 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 278E89F829771344007F0B8A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -254,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966FF7A7297B02AB00E5FA38 /* LoginViewController.swift in Sources */,
 				278E89FF29771344007F0B8A /* ViewController.swift in Sources */,
 				278E89FB29771344007F0B8A /* AppDelegate.swift in Sources */,
 				278E89FD29771344007F0B8A /* SceneDelegate.swift in Sources */,
@@ -590,6 +614,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		966FF7A8297B091100E5FA38 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		966FF7AB297B096400E5FA38 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		966FF7A9297B091100E5FA38 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 966FF7A8297B091100E5FA38 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		966FF7AC297B096400E5FA38 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 966FF7AB297B096400E5FA38 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 278E89EF29771344007F0B8A /* Project object */;
 }
