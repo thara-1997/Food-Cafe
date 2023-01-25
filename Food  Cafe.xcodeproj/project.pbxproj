@@ -15,6 +15,9 @@
 		278E8A1229771348007F0B8A /* Food__CafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E8A1129771348007F0B8A /* Food__CafeTests.swift */; };
 		278E8A1C29771348007F0B8A /* Food__CafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E8A1B29771348007F0B8A /* Food__CafeUITests.swift */; };
 		278E8A1E29771348007F0B8A /* Food__CafeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E8A1D29771348007F0B8A /* Food__CafeUITestsLaunchTests.swift */; };
+		966694F42981BCB500B7E759 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966694F32981BCB500B7E759 /* HomeViewController.swift */; };
+		966694F62981BCF900B7E759 /* FavaouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966694F52981BCF900B7E759 /* FavaouriteViewController.swift */; };
+		966694F82981BD2800B7E759 /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966694F72981BD2800B7E759 /* MainTabbarViewController.swift */; };
 		966FF7A7297B02AB00E5FA38 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FF7A6297B02AB00E5FA38 /* LoginViewController.swift */; };
 		966FF7AA297B091100E5FA38 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 966FF7A9297B091100E5FA38 /* Kingfisher */; };
 		966FF7AD297B096400E5FA38 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 966FF7AC297B096400E5FA38 /* SnapKit */; };
@@ -50,6 +53,9 @@
 		278E8A1729771348007F0B8A /* Food  CafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food  CafeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		278E8A1B29771348007F0B8A /* Food__CafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food__CafeUITests.swift; sourceTree = "<group>"; };
 		278E8A1D29771348007F0B8A /* Food__CafeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food__CafeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		966694F32981BCB500B7E759 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		966694F52981BCF900B7E759 /* FavaouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavaouriteViewController.swift; sourceTree = "<group>"; };
+		966694F72981BD2800B7E759 /* MainTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
 		966FF7A6297B02AB00E5FA38 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +109,7 @@
 		278E89F929771344007F0B8A /* Food  Cafe */ = {
 			isa = PBXGroup;
 			children = (
+				966694F02981BC0000B7E759 /* Controllers */,
 				966FF7A5297B017A00E5FA38 /* Views */,
 				278E89FA29771344007F0B8A /* AppDelegate.swift */,
 				278E89FC29771344007F0B8A /* SceneDelegate.swift */,
@@ -129,6 +136,32 @@
 				278E8A1D29771348007F0B8A /* Food__CafeUITestsLaunchTests.swift */,
 			);
 			path = "Food  CafeUITests";
+			sourceTree = "<group>";
+		};
+		966694F02981BC0000B7E759 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				966694F22981BC4300B7E759 /* Core */,
+				966694F12981BC3600B7E759 /* Onboarding */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		966694F12981BC3600B7E759 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		966694F22981BC4300B7E759 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				966694F32981BCB500B7E759 /* HomeViewController.swift */,
+				966694F52981BCF900B7E759 /* FavaouriteViewController.swift */,
+				966694F72981BD2800B7E759 /* MainTabbarViewController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		966FF7A5297B017A00E5FA38 /* Views */ = {
@@ -277,7 +310,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966694F42981BCB500B7E759 /* HomeViewController.swift in Sources */,
 				966FF7A7297B02AB00E5FA38 /* LoginViewController.swift in Sources */,
+				966694F62981BCF900B7E759 /* FavaouriteViewController.swift in Sources */,
+				966694F82981BD2800B7E759 /* MainTabbarViewController.swift in Sources */,
 				278E89FF29771344007F0B8A /* ViewController.swift in Sources */,
 				278E89FB29771344007F0B8A /* AppDelegate.swift in Sources */,
 				278E89FD29771344007F0B8A /* SceneDelegate.swift in Sources */,
