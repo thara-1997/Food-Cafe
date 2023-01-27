@@ -13,6 +13,17 @@ class LoginViewController: UIViewController {
     private var viewModel = AuthenticationViewViewModel()
     private var subscriptions: Set<AnyCancellable> = []
     
+    private let AvatarImageView: UIImageView = {
+      let imageView = UIImageView(frame: CGRect(x: 20, y: 30, width: 50, height: 50))
+      imageView.contentMode = .scaleAspectFit
+      imageView.image = UIImage(named: "spag")
+      imageView.clipsToBounds = true
+      imageView.layer.masksToBounds = true
+      imageView.layer.cornerRadius = 40
+      imageView.translatesAutoresizingMaskIntoConstraints = false
+      return imageView
+    }()
+    
     private let LoginTitleLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +59,7 @@ class LoginViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Login", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
-        button.backgroundColor = UIColor(displayP3Red: 29/255, green: 161/255, blue: 242/255, alpha: 1)
+        button.backgroundColor = .systemGreen
         button.layer.masksToBounds = true
         button.tintColor = .white
         button.layer.cornerRadius = 25
@@ -101,6 +112,7 @@ class LoginViewController: UIViewController {
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
         view.addSubview(LoginButton)
+        view.addSubview(AvatarImageView)
         LoginButton.addTarget(self, action: #selector(didTapLogin), for: .touchUpInside)
         configureConstraints()
         bindViews()
@@ -113,9 +125,18 @@ class LoginViewController: UIViewController {
     }
     
     private func  configureConstraints(){
+        let AvatarImageViewCOnstarints = [
+            AvatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+         AvatarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+         AvatarImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+         AvatarImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+         
+        ]
+        
         let loginTitleLabelConstraints = [
             LoginTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            LoginTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+            LoginTitleLabel.topAnchor.constraint(equalTo: AvatarImageView.bottomAnchor, constant: 50),
+           
             
         ]
         
@@ -138,12 +159,12 @@ class LoginViewController: UIViewController {
         ]
         
         let loginButtonConstraints = [
-            LoginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            LoginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             LoginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-            LoginButton.widthAnchor.constraint(equalToConstant: 180),
+            LoginButton.widthAnchor.constraint(equalToConstant: 300),
             LoginButton.heightAnchor.constraint(equalToConstant: 50)
         ]
-        
+        NSLayoutConstraint.activate(AvatarImageViewCOnstarints)
         NSLayoutConstraint.activate(loginTitleLabelConstraints)
         NSLayoutConstraint.activate(emailTextFieldConstraints)
         NSLayoutConstraint.activate(passwordTextFieldConstraints)

@@ -21,13 +21,13 @@ class FoodTableViewCell: UITableViewCell {
     
     private let actionSpacing: CGFloat = 60
     private let avatarImageView: UIImageView = {
-        let imageView = UIImageView()
+        let imageView = UIImageView(frame: CGRect(x: 20, y: 30, width: 50, height: 50))
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.clipsToBounds = true
-        imageView.image = UIImage(systemName: "person")
+//        imageView.layer.masksToBounds = true
+//        imageView.clipsToBounds = true
+        imageView.image = UIImage(named: "food")
         imageView.backgroundColor = .red
         return imageView
     }()
@@ -131,14 +131,15 @@ class FoodTableViewCell: UITableViewCell {
         
         let avatarImageViewConstraints = [
             avatarImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            avatarImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
             avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 14),
-            avatarImageView.heightAnchor.constraint(equalToConstant: 50),
-            avatarImageView.widthAnchor.constraint(equalToConstant: 50)
+            avatarImageView.heightAnchor.constraint(equalToConstant: 200),
+            avatarImageView.widthAnchor.constraint(equalToConstant: 200)
             ]
         
         let displayNameLabelConstraints = [
-            displayNameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 20),
-            displayNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20)
+            displayNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 25),
+            displayNameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 5)
         ]
         
         let usernameLabelConstraints = [
