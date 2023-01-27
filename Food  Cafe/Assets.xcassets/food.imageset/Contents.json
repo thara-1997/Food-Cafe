@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "imgbin-vegetarian-cuisine-salad-food-icon-beautifully-fresh-vegetables-hZRuCs5cLkyhDfbWskUiVsxN2.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

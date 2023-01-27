@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>850703607940-m3cl8hg6lld2l3jm2bl2nn70snk9848m.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.850703607940-m3cl8hg6lld2l3jm2bl2nn70snk9848m</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA8cAwy08D-cQ3Eky-dfVqdLEjTfhDHeQw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>850703607940</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>NIBM.Food--Cafe</string>
+	<key>PROJECT_ID</key>
+	<string>foodcafe-20717</string>
+	<key>STORAGE_BUCKET</key>
+	<string>foodcafe-20717.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:850703607940:ios:330b11d7682a0c862ffad1</string>
+</dict>
+</plist>
