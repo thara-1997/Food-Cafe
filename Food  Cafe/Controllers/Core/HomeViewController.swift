@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
         let size:CGFloat = 36
         let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height: size))
         logoImageView.contentMode = .scaleAspectFill
-        logoImageView.image = UIImage(named: "twitter")
+        logoImageView.image = UIImage(named: "simplefastfoodicon")
         
         let middleView = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
         middleView.addSubview(logoImageView)
@@ -106,6 +106,11 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         }
         cell.delegate = self
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let vc = FoodDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

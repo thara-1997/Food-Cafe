@@ -44,6 +44,7 @@
 		96756BDD298316B400741B09 /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96756BDC298316B400741B09 /* HomeViewViewModel.swift */; };
 		96756BDF298317AD00741B09 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96756BDE298317AD00741B09 /* FoodTableViewCell.swift */; };
 		96756BE1298319CA00741B09 /* ProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96756BE0298319CA00741B09 /* ProfileTableViewHeader.swift */; };
+		967EDAAD2986875D00D17272 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967EDAAC2986875D00D17272 /* FoodDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		96756BDC298316B400741B09 /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
 		96756BDE298317AD00741B09 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		96756BE0298319CA00741B09 /* ProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewHeader.swift; sourceTree = "<group>"; };
+		967EDAAC2986875D00D17272 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				96756BB4298300E300741B09 /* OnboardingViewController.swift */,
 				966FF7A6297B02AB00E5FA38 /* LoginViewController.swift */,
 				96756BB62983011200741B09 /* RegistereViewController.swift */,
+				967EDAAC2986875D00D17272 /* FoodDetailViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				96756BD62983155100741B09 /* DatabaseManager.swift in Sources */,
 				96756BDD298316B400741B09 /* HomeViewViewModel.swift in Sources */,
 				96756BD42983151800741B09 /* AuthManager.swift in Sources */,
+				967EDAAD2986875D00D17272 /* FoodDetailViewController.swift in Sources */,
 				9670549A29838C0700FA8203 /* ProfileDataFormViewController.swift in Sources */,
 				278E89FB29771344007F0B8A /* AppDelegate.swift in Sources */,
 				96756BDF298317AD00741B09 /* FoodTableViewCell.swift in Sources */,
