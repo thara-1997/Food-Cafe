@@ -45,6 +45,11 @@
 		96756BDF298317AD00741B09 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96756BDE298317AD00741B09 /* FoodTableViewCell.swift */; };
 		96756BE1298319CA00741B09 /* ProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96756BE0298319CA00741B09 /* ProfileTableViewHeader.swift */; };
 		967EDAAD2986875D00D17272 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967EDAAC2986875D00D17272 /* FoodDetailViewController.swift */; };
+		9680DBA3298ED10600728C82 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9680DBA2298ED10600728C82 /* SDWebImage */; };
+		969261EA298D750600DECDCD /* AddFoodDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969261E9298D750600DECDCD /* AddFoodDataViewController.swift */; };
+		969261EC298D767600DECDCD /* ProductComposeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969261EB298D767600DECDCD /* ProductComposeViewViewModel.swift */; };
+		969261F2298D77D000DECDCD /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969261F1298D77D000DECDCD /* Extension+UIColor.swift */; };
+		969261F4298D7A1A00DECDCD /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969261F3298D7A1A00DECDCD /* ProductData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +101,10 @@
 		96756BDE298317AD00741B09 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		96756BE0298319CA00741B09 /* ProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewHeader.swift; sourceTree = "<group>"; };
 		967EDAAC2986875D00D17272 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		969261E9298D750600DECDCD /* AddFoodDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodDataViewController.swift; sourceTree = "<group>"; };
+		969261EB298D767600DECDCD /* ProductComposeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductComposeViewViewModel.swift; sourceTree = "<group>"; };
+		969261F1298D77D000DECDCD /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		969261F3298D7A1A00DECDCD /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +118,7 @@
 				96756BC529830D3300741B09 /* FirebaseDatabase in Frameworks */,
 				96756BCF29830D3300741B09 /* FirebaseStorage in Frameworks */,
 				966FF7AA297B091100E5FA38 /* Kingfisher in Frameworks */,
+				9680DBA3298ED10600728C82 /* SDWebImage in Frameworks */,
 				96756BC129830D3300741B09 /* FirebaseAuth in Frameworks */,
 				966FF7AD297B096400E5FA38 /* SnapKit in Frameworks */,
 				96756BC329830D3300741B09 /* FirebaseAuthCombine-Community in Frameworks */,
@@ -157,6 +167,7 @@
 		278E89F929771344007F0B8A /* Food  Cafe */ = {
 			isa = PBXGroup;
 			children = (
+				969261ED298D772000DECDCD /* Utils */,
 				96756BD9298315D900741B09 /* ViewModels */,
 				96756BD2298314C700741B09 /* Networking */,
 				96756BBA298303CD00741B09 /* Models */,
@@ -235,6 +246,7 @@
 			children = (
 				9670549729838B3800FA8203 /* ProfileViewController.swift */,
 				9670549929838C0700FA8203 /* ProfileDataFormViewController.swift */,
+				969261E9298D750600DECDCD /* AddFoodDataViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -243,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				96756BBB2983041000741B09 /* TwitterUser.swift */,
+				969261F3298D7A1A00DECDCD /* ProductData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,8 +276,25 @@
 				96756BDA2983167000741B09 /* AuthenticationViewViewModel.swift */,
 				96756BDC298316B400741B09 /* HomeViewViewModel.swift */,
 				9670549B29838C8500FA8203 /* ProfileDataFormViewViewModel.swift */,
+				969261EB298D767600DECDCD /* ProductComposeViewViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		969261ED298D772000DECDCD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				969261EE298D773800DECDCD /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		969261EE298D773800DECDCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				969261F1298D77D000DECDCD /* Extension+UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +325,7 @@
 				96756BCC29830D3300741B09 /* FirebaseFirestoreSwift */,
 				96756BCE29830D3300741B09 /* FirebaseStorage */,
 				96756BD029830D3300741B09 /* FirebaseStorageCombine-Community */,
+				9680DBA2298ED10600728C82 /* SDWebImage */,
 			);
 			productName = "Food  Cafe";
 			productReference = 278E89F729771344007F0B8A /* Food  Cafe.app */;
@@ -372,6 +403,7 @@
 				966FF7A8297B091100E5FA38 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				966FF7AB297B096400E5FA38 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				96756BBF29830D3300741B09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9680DBA1298ED10600728C82 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 278E89F829771344007F0B8A /* Products */;
 			projectDirPath = "";
@@ -416,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969261EA298D750600DECDCD /* AddFoodDataViewController.swift in Sources */,
 				96756BE1298319CA00741B09 /* ProfileTableViewHeader.swift in Sources */,
 				96756BBC2983041000741B09 /* TwitterUser.swift in Sources */,
 				966694F42981BCB500B7E759 /* HomeViewController.swift in Sources */,
@@ -436,7 +469,10 @@
 				278E89FB29771344007F0B8A /* AppDelegate.swift in Sources */,
 				96756BDF298317AD00741B09 /* FoodTableViewCell.swift in Sources */,
 				278E89FD29771344007F0B8A /* SceneDelegate.swift in Sources */,
+				969261F4298D7A1A00DECDCD /* ProductData.swift in Sources */,
+				969261EC298D767600DECDCD /* ProductComposeViewViewModel.swift in Sources */,
 				96756BD82983159C00741B09 /* StorageManager.swift in Sources */,
+				969261F2298D77D000DECDCD /* Extension+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +832,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		9680DBA1298ED10600728C82 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -853,6 +897,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 96756BBF29830D3300741B09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		9680DBA2298ED10600728C82 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9680DBA1298ED10600728C82 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -16,6 +16,7 @@ class DatabaseManager {
     
     let db = Firestore.firestore()
     let usersPath: String = "users"
+    let productPath: String = "products"
     
     
     func collectionUsers(add user: User) -> AnyPublisher<Bool, Error> {
@@ -31,5 +32,23 @@ class DatabaseManager {
             }
             .eraseToAnyPublisher()
     }
+    
+    func collectionProduct(dispatch product: ProductData) -> AnyPublisher <Bool, Error> {
+            db.collection(productPath).document(product.id).setData(from: product)
+                .map{ _ in true }
+                .eraseToAnyPublisher()
+        }
+    
+    func collectionFood() -> AnyPublisher<[ProductData], Error>{
+           db.collection(productPath)
+               .getDocuments()
+               .tryMap(\.documents)
+               .tryMap{ snapshots in
+                   try snapshots.map({
+                       try $0.data(as: ProductData.self)
+                   })
+               }
+               .eraseToAnyPublisher()
+       }
     
 }
