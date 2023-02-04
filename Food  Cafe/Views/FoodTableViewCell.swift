@@ -41,14 +41,14 @@ class FoodTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let usernameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "@thara"
-        label.textColor = .secondaryLabel
-        label.font = .systemFont(ofSize: 16, weight: . regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    private let usernameLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "@thara"
+//        label.textColor = .secondaryLabel
+//        label.font = .systemFont(ofSize: 16, weight: . regular)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
     
     private  let tweetTextContentLabel: UILabel = {
         let label = UILabel()
@@ -82,25 +82,25 @@ class FoodTableViewCell: UITableViewCell {
         return button
     }()
     
-    private let shareButton: UIButton = {
-        let button = UIButton(type:  .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
-        button.tintColor = .systemGray2
-        return button
-    }()
+//    private let shareButton: UIButton = {
+//        let button = UIButton(type:  .system)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
+//        button.tintColor = .systemGray2
+//        return button
+//    }()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(avatarImageView)
         contentView.addSubview(displayNameLabel)
-        contentView.addSubview(usernameLabel)
+//        contentView.addSubview(usernameLabel)
         contentView.addSubview(tweetTextContentLabel)
 //        contentView.addSubview(replyButton)
 //        contentView.addSubview(retweetButton)
         contentView.addSubview(likeButton)
-        contentView.addSubview(shareButton)
+//        contentView.addSubview(shareButton)
         configureConstraints()
         configureButtons()
     }
@@ -125,12 +125,12 @@ class FoodTableViewCell: UITableViewCell {
 //        replyButton.addTarget(self, action: #selector(didTapReply), for: .touchUpInside)
 //        retweetButton.addTarget(self, action: #selector(didTapRetweet), for: .touchUpInside)
         likeButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
-        shareButton.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
+//        shareButton.addTarget(self, action: #selector(didTapShare), for: .touchUpInside)
     }
     
     func configureProducts(with model: ProductData) {
             displayNameLabel.text = model.displayName
-            usernameLabel.text = model.caloriesCon
+//            usernameLabel.text = model.caloriesCon
             tweetTextContentLabel.text = model.bio
             avatarImageView.sd_setImage(with: URL(string: model.avatarPath))
         }
@@ -147,14 +147,14 @@ class FoodTableViewCell: UITableViewCell {
         
         let displayNameLabelConstraints = [
             displayNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 25),
-            displayNameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 5)
+            displayNameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 25)
         ]
         
-        let usernameLabelConstraints = [
-            usernameLabel.leadingAnchor.constraint(equalTo: displayNameLabel.trailingAnchor, constant: 10),
-            usernameLabel.centerYAnchor.constraint(equalTo: displayNameLabel.centerYAnchor)
-            
-        ]
+//        let usernameLabelConstraints = [
+//            usernameLabel.leadingAnchor.constraint(equalTo: displayNameLabel.trailingAnchor, constant: 10),
+//            usernameLabel.centerYAnchor.constraint(equalTo: displayNameLabel.centerYAnchor)
+//
+//        ]
         
         let tweetTextContentLabelConstraints = [
             tweetTextContentLabel.leadingAnchor.constraint(equalTo: displayNameLabel.leadingAnchor),
@@ -177,24 +177,24 @@ class FoodTableViewCell: UITableViewCell {
         let likeButtonConstraints = [
             likeButton.leadingAnchor.constraint(equalTo: tweetTextContentLabel.leadingAnchor),
             likeButton.topAnchor.constraint(equalTo: tweetTextContentLabel.bottomAnchor, constant: 10),
-//            likeButton.leadingAnchor.constraint(equalTo: tweetTextContentLabel.trailingAnchor, constant:  actionSpacing),
+            likeButton.trailingAnchor.constraint(equalTo: tweetTextContentLabel.trailingAnchor),
 //            likeButton.centerYAnchor.constraint(equalTo: tweetTextContentLabel.centerYAnchor),
             likeButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)
         ]
         
-        let shareButtonConstraints = [
-            shareButton.leadingAnchor.constraint(equalTo: likeButton.trailingAnchor, constant:  actionSpacing),
-            shareButton.centerYAnchor.constraint(equalTo: likeButton.centerYAnchor)
-        ]
+//        let shareButtonConstraints = [
+//            shareButton.leadingAnchor.constraint(equalTo: likeButton.trailingAnchor, constant:  actionSpacing),
+//            shareButton.centerYAnchor.constraint(equalTo: likeButton.centerYAnchor)
+//        ]
         
         NSLayoutConstraint.activate(avatarImageViewConstraints)
         NSLayoutConstraint.activate(displayNameLabelConstraints)
-        NSLayoutConstraint.activate(usernameLabelConstraints)
+//        NSLayoutConstraint.activate(usernameLabelConstraints)
         NSLayoutConstraint.activate(tweetTextContentLabelConstraints)
 //        NSLayoutConstraint.activate(replyButtonConstraints)
 //        NSLayoutConstraint.activate(retweetButtonConstraints)
         NSLayoutConstraint.activate(likeButtonConstraints)
-        NSLayoutConstraint.activate(shareButtonConstraints)
+//        NSLayoutConstraint.activate(shareButtonConstraints)
     }
        
     

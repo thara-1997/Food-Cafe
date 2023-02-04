@@ -111,10 +111,10 @@ class FoodDetailViewController: UIViewController {
        
        func configureProductDetail(with model: ProductData) {
            hintLabel.text = model.displayName
-           calorycard.text = model.caloriesCon
-           sugarcard.text = model.sugarCon
-           saltcard.text = model.saltCon
-           fatcard.text = model.fatCon
+           calorycard.text = "Calories:- \(model.caloriesCon)"
+           sugarcard.text = "Sugar:- \(model.sugarCon)"
+           saltcard.text = "Salt:- \(model.saltCon)"
+           fatcard.text = "Fat:- \(model.fatCon)"
            AvatarImageView.sd_setImage(with: URL(string: model.avatarPath))
        }
            

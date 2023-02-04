@@ -28,8 +28,8 @@ class HomeViewController: UIViewController {
         
         navigationItem.titleView = middleView
         
-        let profileImage = UIImage(systemName: "person")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: profileImage, style: .plain, target: self, action: #selector(didTapProfile))
+//        let profileImage = UIImage(systemName: "person")
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: profileImage, style: .plain, target: self, action: #selector(didTapProfile))
     }
     
     private lazy var addUserButton: UIButton = {
@@ -62,7 +62,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(timelineTableView)
-        view.addSubview(addUserButton)
+//        view.addSubview(addUserButton)
         timelineTableView.delegate = self
         timelineTableView.dataSource = self
         configureNavigationBar()
@@ -125,22 +125,15 @@ class HomeViewController: UIViewController {
     }
     
     private func configureConstraints(){
-//            let composeTweetButtonConstraints = [
-//                composeTweetButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
-//                composeTweetButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
-//                composeTweetButton.widthAnchor.constraint(equalToConstant: 60),
-//                composeTweetButton.heightAnchor.constraint(equalToConstant: 60)
+            
+//            let addUserButtonConstraints = [
+//                addUserButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
+//                addUserButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
+//                addUserButton.widthAnchor.constraint(equalToConstant: 60),
+//                addUserButton.heightAnchor.constraint(equalToConstant: 60)
 //            ]
-            
-            let addUserButtonConstraints = [
-                addUserButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
-                addUserButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
-                addUserButton.widthAnchor.constraint(equalToConstant: 60),
-                addUserButton.heightAnchor.constraint(equalToConstant: 60)
-            ]
-            
-//            NSLayoutConstraint.activate(composeTweetButtonConstraints)
-            NSLayoutConstraint.activate(addUserButtonConstraints)
+//
+//            NSLayoutConstraint.activate(addUserButtonConstraints)
         }
     
 }
